@@ -34,11 +34,10 @@ class Altitude : NSObject, CLLocationManagerDelegate {
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
-//        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(refreshLocation), userInfo: nil, repeats: true)
     }
     
     func stop() {
-        
+        locationManager.stopUpdatingLocation()
     }
     
     func changeUnits() {
